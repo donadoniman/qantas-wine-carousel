@@ -15,7 +15,7 @@ const withEnhancements = (WrappedComponent) => {
     const enhancedProduct = {
       ...product,
       discount: discount || null,
-      tag: product.tag || "new",
+      tag: product.tag || "",
     };
 
     return <WrappedComponent {...props} product={enhancedProduct} />;
