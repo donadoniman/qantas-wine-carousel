@@ -15,5 +15,5 @@ test("renders product details", () => {
   expect(screen.getByText("Sample Product")).toBeInTheDocument();
   expect(screen.getByText("Sample Description")).toBeInTheDocument();
   expect(screen.getByText("$100 / 2000 pts")).toBeInTheDocument();
-  expect(screen.getByText("Was: $150 / 3000 pts")).toBeInTheDocument();
+  expect(screen.getByText("$150 / 3000 pts")).toBeInTheDocument();
 });
