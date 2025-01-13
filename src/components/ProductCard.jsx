@@ -1,6 +1,4 @@
 import React from "react";
-import { ShoppingCartIcon } from "@heroicons/react/outline";
-import PropTypes from "prop-types";
 import PriceDisplay from "./PriceDisplay"; // Import the PriceDisplay component
 
 const ProductCard = ({ product }) => {
