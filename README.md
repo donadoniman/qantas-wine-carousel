@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Qantas Wine Carousel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The **Qantas Wine Carousel** is a React-based product carousel designed to display wine products. It features automatic slide transitions, manual navigation via dots, and responsive design. The project uses **Higher-Order Components (HOCs)** for separation of concerns and **Tailwind CSS** for styling.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Carousel**: Product Listing.
+- **Loader and Error Handling**:
+  - Displays a loading spinner while fetching data.
+  - Shows an error message with a retry button on failure.
+- **Higher-Order Components (HOCs)**:
+  - `withDataFetching`: Handles API calls and manages loading/error states.
+  - `withLoadingAndError`: Displays loaders and error messages.
+  - `withDataEnhancement`: Enhances data by adding computed properties (e.g., discounts).
+- **Responsive Design**: Fully responsive layout using Tailwind CSS.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (v14 or above)
+- npm (v6 or above)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Steps to Run the Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/donadoniman/qantas-wine-carousel.git
+   cd qantas-wine-carousel
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+   ```bash
+   npm install
 
-### `npm run eject`
+3. Start the development server:
+   ```bash
+   npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The application will be available at http://localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Running Tests
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Run All Tests
+    ```bash
+    npm test
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Approach and Trade-offs
 
-## Learn More
+#### Approach
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Component-Based Architecture:
+    Modular components ensure maintainability and reusability.
+    HOCs encapsulate functionality for data fetching, loading/error handling, and data enhancement.
+2. Tailwind CSS:
+    Provides a responsive and consistent styling approach.
+3. Testing:
+    Tests cover key functionality for core components and HOCs.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Trade-offs
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. HOCs over Hooks:
+    HOCs ensure separation of concerns but could be replaced by hooks for a more modern approach.
+2. Testing Focus:
+    Tests focus on functionality rather than exhaustive edge cases.
+3. Future Improvements
+    1. Auto-play:
+        Implement Auto Play functionality when the user interacts with the carousel.
+    2. Infinite Scrolling:
+        Add infinite scrolling for seamless user experience.
+    3. Swipe Gestures:
+        Support swipe gestures for touch devices.
