@@ -75,3 +75,8 @@ The application will be available at http://localhost:3000.
         Add infinite scrolling for seamless user experience.
     3. Swipe Gestures:
         Support swipe gestures for touch devices.
+    4. End to End Testing
+        Create end-to-end testing with Playwright
+
+### Author
+Dona Doni Manuel
